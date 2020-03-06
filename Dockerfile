@@ -3,7 +3,7 @@ WORKDIR /app
 COPY ./ ./
 ARG NAME
 ARG VERSION
-RUN GOOS=linux GOARCH=amd64 go build -o postgres-operator -ldflags "-X \"main.version=$VERSION\""  main.go
+RUN GOOS=linux GOARCH=amd64 go build -o postgres-operator -ldflags "-X \"main.version=$VERSION\""  cmd/main.go
 
   
 FROM alpine
